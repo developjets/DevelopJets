@@ -1,0 +1,98 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>DevelopJets</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+   <!-- Favicons -->
+  <link rel="icon" href="{% static '/assets/image/logo.png' %}">
+  <link rel="apple-touch-icon" href="{% static '/assets/image/logo.png' %}">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link rel="stylesheet" href="{% static '/assets/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static '/assets/css/bootstrap-icons.css' %}">
+  <link rel="stylesheet" href="{% static '/assets/css/aos.css' %}">
+  <link rel="stylesheet" href="{% static '/assets/css/glightbox.min.css' %}">
+  <link rel="stylesheet" href="{% static '/assets/css/swiper-bundle.min.css' %}">
+
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet" href="{% static '/assets/css/main.css' %}">
+
+  <!-- =======================================================
+  * Template Name: DevelopJet 1.0
+  * Template URL: https://www.developjets.ga
+  * Author: DevelopJets
+  ======================================================== -->
+    </head>
+
+    <body>
+        <!-- ======= Header ======= -->
+        {% include 'header.html' %}
+        <!-- End Header -->
+        
+        <main id="main">
+            <!-- ======= Portfolio Section ======= -->
+            <section id="project" class="portfolio sections-bg">
+                <div class="container" data-aos="fade-up">
+                    <div class="section-header">
+                        <h2>Projects</h2>
+                        <!--<p>Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum nostrum enim velit qui ut et autem uia reprehenderit sunt deleniti</p>-->
+                    </div>
+                    
+                
+
+                <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">        
+                    {% for x in projectData %}
+                    <div class="row gy-4 portfolio-container">
+                        <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+                            <div class="portfolio-wrap">
+                                <a href="{{ x.image1.url }}" data-gallery="portfolio-gallery-app" class="glightbox"><img src="{{ x.image1.url }}" class="img-fluid" alt=""></a>
+                                <div class="portfolio-info">
+                                    <h4><a href="projectDetail/{{ x.id }}" title="More Details">{{ x.title }}</a></h4>
+                                    <p>{{ x.detail }}</p>
+                                </div>
+                            </div>
+                        </div><!-- End Portfolio Item -->
+                        {% endfor %}
+                    </div><!-- End Portfolio Container -->
+                </div>
+
+                
+
+            </div>   
+            </section><!-- End Portfolio Section -->
+        </main>
+
+        <!-- ======= Footer ======= -->
+        {% include 'footer.html' %}
+        <!-- End Footer -->
+        <!-- End Footer -->
+
+        <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+        <div id="preloader"></div>
+
+        <!-- Vendor JS Files -->
+        <script src="{% static '/assets/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static '/assets/js/aos.js' %}"></script>
+        <script src="{% static '/assets/js/glightbox.min.js' %}"></script>
+        <script src="{% static '/assets/js/purecounter_vanilla.js' %}"></script>
+        <script src="{% static '/assets/js/swiper-bundle.min.js' %}"></script>
+        <script src="{% static '/assets/js/isotope.pkgd.min.js' %}"></script>
+        <script src="{% static '/assets/js/validate.js' %}"></script>
+      
+        <!-- Template Main JS File -->
+        <script src="{% static '/assets/js/main.js' %}"></script>
+    </body>
+</html>

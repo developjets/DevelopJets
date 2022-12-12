@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>404 Error</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+
+        <!-- Favicons -->
+        <link rel="icon" href="{% static '/assets/image/logo.png' %}">
+        <link rel="apple-touch-icon" href="{% static '/assets/image/logo.png' %}">
+
+        <!-- Bootstrap -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="{% static '/assets/css/404.css' %}">
+
+    </head>
+    <body>
+        
+        <header class="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <img class="logo" src="{% static '/assets/image/logo.png' %}">
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">About</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link">Contact</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x'></i>
+                    </div>
+                </div>
+
+           
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt'></i>
+                </div>
+            </nav>
+        </header>
+
+     
+        <main class="main">
+       
+            <section class="home">
+                <div class="home__container container">
+                    <div class="home__data">
+                        <span class="home__subtitle">Error 404</span>
+                        <h1 class="home__title">Hey Buddy</h1>
+                        <p class="home__description">
+                            We can't seem to find the page <br> you are looking for.
+                        </p>
+                        <a href="/home" class="home__button">
+                            Go Home
+                        </a>
+                    </div>
+
+                    <div class="home__img">
+                        <img src="{% static '/assets/image/ghost-img.png' %}" alt="develop-jets-404-image">
+                        <div class="home__shadow"></div>
+                    </div>
+                </div>
+
+                <footer class="home__footer">
+                    <span>+91 9057277550</span>
+                    <span>|</span>
+                    <span>info.developjets@gmail.com</span>
+                </footer>
+            </section>
+        </main>
+
+  
+        <script src="{% static 'assets/js/scrollreveal.min.js' %}"></script>
+
+     
+        <script src="{% static '/assets/js/404.js' %}"></script>
+    </body>
+</html>
